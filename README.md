@@ -15,24 +15,21 @@ Before running the notebook, install the required dependencies:
 pip install -r requirements.txt
 ```
 
-## Running the Model
+## Running the Model (`code.ipynb`)
 
 ### 1. Load and Preprocess Data
 
 - Extract frames from videos.
-- Resize frames to the required input size (e.g., 64x64).
+- Resize frames to the required input size (64x64).
 - Prepare sequences of frames as input to the model.
 - **Note:** Make sure to change the directories to match your folder containing the **Brawl** and **Peace** folders.
 
 ### 2. Train the Model
-
-- Open and run `code.ipynb`.
-- The model architecture includes MobileNet for feature extraction, followed by LSTMs for sequence learning.
+- The model architecture includes MobileNet for feature extraction followed by LSTMs for sequence learning.
 
 ### 3. Evaluate the Model
 
 - The model is evaluated using precision, recall, and F1-score.
-
 - The classification report is as follows:
 
   ```
@@ -50,10 +47,20 @@ pip install -r requirements.txt
 
 ### 4. Save and Use the Model
 
-- The trained model can be saved as a `.keras` file for later use.
+- The trained model is saved as a `model.keras` file for later use.
 - Load the model to classify new videos.
 
-## License
 
-This project is open-source and free to use.
+## Bonus Task
 
+### Dependencies
+Before running the notebook, install the required dependencies:
+
+```bash
+pip install -r requirements_bonus.txt
+```
+
+### Running the Code (`code(bonus).ipynb`)
+
+- Run the notebook in order.
+- Add your own video to see the code in action.
