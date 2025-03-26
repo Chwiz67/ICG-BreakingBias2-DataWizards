@@ -1,0 +1,5 @@
+opencv-python==4.11.0.86
+numpy==2.2.4
+ultralytics==8.2.0
+tensorflow==2.19.0
+deep-sort-realtime==0.3.0
