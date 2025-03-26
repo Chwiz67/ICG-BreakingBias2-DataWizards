@@ -51,7 +51,7 @@ Both pathways undergo feature extraction with Conv3D + BatchNorm + Pooling, then
 
 ### 4. Save and Use the Model
 
-- The trained model is saved as a `model.keras` file for later use.
+- The trained model is saved as a `final_model.keras` file for later use.
 - Load the model to classify new videos.
 
 
