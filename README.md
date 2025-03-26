@@ -1,6 +1,6 @@
 # 🎥 ICG-BreakingBias2-DataWizards
 
-🚀 This repository contains a deep learning model that classifies videos into two categories: **Brawl (Violent)** and **Peace (Non-Violent)**. The model is implemented in an **IPython Notebook** and utilizes deep learning techniques for video classification. It also includes the `prediction.csv` file for testing data and a `demo.mp4` for the bonus task.
+This repository contains a deep learning model that classifies videos into two categories: **Brawl (Violent)** and **Peace (Non-Violent)**. The model is implemented in an **IPython Notebook** and utilizes deep learning techniques for video classification. It also includes the `prediction.csv` file for testing data and a `demo.mp4` for the bonus task.
 
 ---
 
@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 ### 2️⃣ Train the Model
 
-🧠 The model is a **SlowFast-inspired 3D CNN** designed for video classification. It consists of two pathways:
+The model is a **SlowFast-inspired 3D CNN** designed for video classification. It consists of two pathways:
 
 - **Slow Pathway:** Processes every **α=4** frames, capturing high-level temporal semantics with **3D convolutions** and **MaxPooling layers**.
 - **Fast Pathway:** Processes all frames but with **shallower filters**, focusing on fine-grained motion details.
