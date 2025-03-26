@@ -1,6 +1,6 @@
 # 🎥 ICG-BreakingBias2-DataWizards
 
-🚀 This repository contains a deep learning model that classifies videos into two categories: **Brawl (Violent)** and **Peace (Non-Violent)**. The model is implemented in an **IPython Notebook** and utilizes deep learning techniques for video classification. It also includes the `prediction.csv` file for testing data and a `demo.mp4` for the bonus task.
+This repository contains a deep learning model that classifies videos into two categories: **Brawl (Violent)** and **Peace (Non-Violent)**. The model is implemented in an **IPython Notebook** and utilizes deep learning techniques for video classification. It also includes the `prediction.csv` file for testing data and a `demo.mp4` for the bonus task.
 
 ---
 
@@ -80,7 +80,16 @@ Before running the notebook, install the required dependencies:
 ```bash
 pip install -r requirements_bonus.txt
 ```
+### 🧠 Model Pipeline
+✨ Detection Pathway:
+   *YOLOv8*: Detects persons in each frame using confidence-based filtering.
 
+✨ Tracking Pathway:
+   *DeepSORT*: Assigns unique IDs and maintains trajectories for detected persons across frames.
+
+✨ Classification Pathway:
+    *MoBiLSTM*: Crops, resizes, and classifies each tracked person as "Brawl" or "Peace".
+    
 ### 🎬 Running the Code (`code(bonus).ipynb`)
 
 📌 Run the notebook in order.
