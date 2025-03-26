@@ -25,7 +25,11 @@ pip install -r requirements.txt
 - **Note:** Make sure to change the directories to match your folder containing the **Brawl** and **Peace** folders.
 
 ### 2. Train the Model
-- The model architecture includes MobileNet for feature extraction followed by LSTMs for sequence learning.
+The model is a SlowFast-inspired 3D CNN designed for video classification. It consists of two pathways
+- Slow Pathway: Processes every α=4 frames, capturing high-level temporal semantics with 3D convolutions and MaxPooling layers.
+- Fast Pathway: Processes all frames but with shallower filters, focusing on fine-grained motion details.
+
+Both pathways undergo feature extraction with Conv3D + BatchNorm + Pooling, then fuse via 1x1x1 convolutions. The fused features pass through 3D residual blocks, Global Average Pooling, and a Dense classifier. The model is optimized with AdamW and mixed precision training for efficiency.
 
 ### 3. Evaluate the Model
 
@@ -35,15 +39,15 @@ pip install -r requirements.txt
   ```
             precision    recall  f1-score   support
 
-            0       0.80      0.95      0.87       200
-            1       0.94      0.76      0.84       200
+            0       0.91      0.90      0.90       200
+            1       0.90      0.91      0.91       200
 
-    accuracy                           0.85       400
-    macro avg       0.87      0.85      0.85       400
-    weighted avg    0.87      0.85      0.85       400
+    accuracy                           0.91       400
+    macro avg       0.91      0.91      0.90       400
+    weighted avg    0.91      0.91      0.90       400
   ```
 
-- The final model achieves an **F1-score of 0.85**.
+- The final model achieves an **F1-score of 0.91**.
 
 ### 4. Save and Use the Model
 
