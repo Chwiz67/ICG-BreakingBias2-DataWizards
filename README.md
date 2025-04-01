@@ -48,21 +48,6 @@ pip install -r requirements.txt
 
 📊 The model is evaluated using **precision, recall, and F1-score**.
 
-📌 **Classification Report:**
-
-```
-            precision    recall  f1-score   support
-
-            0       0.91      0.90      0.90       200
-            1       0.90      0.91      0.91       200
-
-    accuracy                           0.91       400
-    macro avg       0.91      0.91      0.90       400
-    weighted avg    0.91      0.91      0.90       400
-```
-
-🏆 **Final Model F1-Score:** **0.91**
-
 ---
 
 ### 4️⃣ Save and Use the Model
